@@ -63,6 +63,14 @@ def fisica():
 
     print(f"A distancia percorrida pelo projétio foi de: {resultado} ")
 
+def determinante():
+    linhas = verificar("Digite o número de linhas e colunas:")
+    matriz = []
+
+    print(f"Criando uma matriz {linhas}x{linhas}:\n")
+
+    #Prenchendo a matriz com um laço for:
+    
 
 #Criando o Menu:
 def menu():
