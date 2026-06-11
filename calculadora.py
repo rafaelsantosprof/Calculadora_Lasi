@@ -22,6 +22,11 @@ def soma():
 
     print(f"O resultado da soma é: {res_soma} \n")
 
-soma()
-# O código quebra quando o usuário digita uma letra ao invés de um número.
-# Correção, criar uma nova função para tratar o erro, com try except.
+def subtrair():
+    numeroA = verificar("Digite o primeiro número:")
+    numeroB = verificar("Digite o segundo número:")
+    res_sub = float(numeroA) - float(numeroB)
+
+    print(f"O resultado da soma é: {res_sub} \n")
+
+subtrair()
