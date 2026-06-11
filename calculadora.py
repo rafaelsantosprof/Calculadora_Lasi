@@ -43,4 +43,24 @@ def dividir():
 
     print(f"O resultado da soma é: {res_div} \n")
 
-dividir()
+
+
+# Primeira parte da calculadora concluído
+# Adicionar funções extras:
+def fisica():
+    # Variáveis:
+    gravidade = 9.8 #Constante
+    velocidade = verificar("Digite a velocidade inicial: \n") #Fornecido pelo usuário
+    angulo = verificar("Digite o ângulo em graus:\n") #Fornecido pelo usuário
+    radianos = math.radians(angulo) #Uso da biblioteca por questões de bloqueio trigonométrico
+
+    #Fazendo V ao quadrado:
+    numeroA = velocidade * velocidade
+    #Calculando o seno de 2vezes o ângulo:
+    numeroB = math.sin(2 * radianos)
+
+    resultado = (numeroA * numeroB) / gravidade
+
+    print(f"A distancia percorrida pelo projétio foi de: {resultado} ")
+
+fisica()
