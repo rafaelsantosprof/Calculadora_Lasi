@@ -63,4 +63,45 @@ def fisica():
 
     print(f"A distancia percorrida pelo projétio foi de: {resultado} ")
 
-fisica()
+
+#Criando o Menu:
+def menu():
+
+    while True:
+        print("*** CALCULADORA LASI ***")
+        print("Opção 1: Soma")
+        print("Opção 2: Subtração")
+        print("Opção 3: Multiplicação")
+        print("Opção 4: Divisão")
+        print("Opção 5: Distancia percorrida por um projétil")
+        print("Opção 6: Determinante de matriz")
+        print("Opção 7: Sair do programa\n")
+
+        opcao = input("Escolha uma opção (1-6): ")
+        
+        if opcao == '1':
+            soma()
+
+        elif opcao == '2':
+            subtrair()
+
+        elif opcao == '3':
+            multiplicar()
+
+        elif opcao == '4':
+            dividir()
+
+        elif opcao == '5':
+            fisica()
+
+        elif opcao == '6':
+            print("matriz")
+
+        elif opcao == '7':
+            print("Saindo...")
+            break
+
+        else:
+            print("Opção inválida\n")
+
+menu()
