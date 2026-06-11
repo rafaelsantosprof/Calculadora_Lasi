@@ -29,4 +29,11 @@ def subtrair():
 
     print(f"O resultado da soma é: {res_sub} \n")
 
-subtrair()
+def multiplicar():
+    numeroA = verificar("Digite o primeiro número:")
+    numeroB = verificar("Digite o segundo número:")
+    res_mult = float(numeroA) * float(numeroB)
+
+    print(f"O resultado da soma é: {res_mult} \n")
+
+multiplicar()
