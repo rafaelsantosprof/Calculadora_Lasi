@@ -36,4 +36,11 @@ def multiplicar():
 
     print(f"O resultado da soma é: {res_mult} \n")
 
-multiplicar()
+def dividir():
+    numeroA = verificar("Digite o primeiro número:")
+    numeroB = verificar("Digite o segundo número:")
+    res_div = float(numeroA) / float(numeroB)
+
+    print(f"O resultado da soma é: {res_div} \n")
+
+dividir()
