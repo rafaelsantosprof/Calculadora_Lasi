@@ -27,21 +27,21 @@ def subtrair():
     numeroB = verificar("Digite o segundo número:")
     res_sub = float(numeroA) - float(numeroB)
 
-    print(f"O resultado da soma é: {res_sub} \n")
+    print(f"O resultado da subtração é: {res_sub} \n")
 
 def multiplicar():
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_mult = float(numeroA) * float(numeroB)
 
-    print(f"O resultado da soma é: {res_mult} \n")
+    print(f"O resultado da multiplicação é: {res_mult} \n")
 
 def dividir():
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_div = float(numeroA) / float(numeroB)
 
-    print(f"O resultado da soma é: {res_div} \n")
+    print(f"O resultado da divisão é: {res_div} \n")
 
 
 
@@ -63,14 +63,56 @@ def fisica():
 
     print(f"A distancia percorrida pelo projétio foi de: {resultado} ")
 
-def determinante():
-    linhas = verificar("Digite o número de linhas e colunas:")
+
+
+    #para calcular o determinate
+def submatriz(matriz, col_remover):
+    return [
+        linha[:col_remover] + linha[col_remover + 1 :] for linha in matriz[1:]
+    ]
+
+
+def calcular_det(matriz):
+
+    ordem = len(matriz)
+    if ordem == 1:
+        return matriz[0][0]
+    if ordem == 2:
+        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
+
+    det = 0
+    for col in range(ordem):
+        sinal = 1 if col % 2 == 0 else -1
+        sub = submatriz(matriz, col)
+        det += sinal * matriz[0][col] * calcular_det(sub)
+    return det
+
+
+def determinate():
+    print("\nCÁLCULO DE DETERMINANTE \n")
+
+    #pedir a ordem da matri
+    ordem = int(verificar("Digite a ordem da matriz quadrada (ex: 2, 3, 4): "))
+
+    #monta a matri a partir das informações do usuário
     matriz = []
+    for i in range(ordem):
+        linha = []
+        for j in range(ordem):
+            elemento = verificar(f"Digite o elemento da posição [{i+1}][{j+1}]: ")
+            linha.append(elemento)
+        matriz.append(linha)
 
-    print(f"Criando uma matriz {linhas}x{linhas}:\n")
+    #printa a matri na tela
+    print("\nMatriz informada:")
+    for linha in matriz:
+        print(linha)
 
-    #Prenchendo a matriz com um laço for:
-    
+    #resultado
+    resultado = calcular_det(matriz)
+    print(f"\n> O determinante da matriz é: {resultado} \n")
+
+
 
 #Criando o Menu:
 def menu():
@@ -103,7 +145,7 @@ def menu():
             fisica()
 
         elif opcao == '6':
-            print("matriz")
+            determinate()
 
         elif opcao == '7':
             print("Saindo...")
