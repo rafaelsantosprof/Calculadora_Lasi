@@ -1,3 +1,4 @@
+#Calculadora LASI
 import math
 
 # Criando a função de verificação:
