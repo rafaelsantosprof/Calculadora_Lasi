@@ -50,4 +50,4 @@ Esta ferramenta pode ser aplicada em diversos cenários práticos e acadêmicos,
 2. Clone este repositório ou baixe o arquivo `.py`.
 3. Abra o terminal na pasta do arquivo e execute:
    ```bash
-   python calculadora_lasi.py
+   python calculadora.py
