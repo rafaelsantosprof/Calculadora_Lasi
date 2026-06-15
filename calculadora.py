@@ -1,8 +1,3 @@
-# Projeto: calculadora com as quatro operações básicas e duas funções extras:
-# 1ª calculo da distancia percorrida por um projétil;
-# 2ª calculo do determinante de uma matriz.
-
-# Para o 1º caso, será usada a biblioteca math.
 import math
 
 # Criando a função de verificação:
@@ -16,43 +11,49 @@ def verificar (numero):
 
 # Definir cada função da calculadora:
 def soma():
+    print("\n---Cálculo da soma---\n")
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_soma = float(numeroA) + float(numeroB)
 
-    print(f"O resultado da soma é: {res_soma} \n")
+    print(f"\nO resultado da soma é: {res_soma} \n")
 
 def subtrair():
+    print("\n---Cálculo da subtração---\n")
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_sub = float(numeroA) - float(numeroB)
 
-    print(f"O resultado da subtração é: {res_sub} \n")
+    print(f"\nO resultado da subtração é: {res_sub} \n")
 
 def multiplicar():
+    print("\n---Cálculo da multiplicação---\n")
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_mult = float(numeroA) * float(numeroB)
 
-    print(f"O resultado da multiplicação é: {res_mult} \n")
+    print(f"\nO resultado da multiplicação é: {res_mult} \n")
 
 def dividir():
+    print("\n---Cálculo da Divisão---\n")
     numeroA = verificar("Digite o primeiro número:")
     numeroB = verificar("Digite o segundo número:")
     res_div = float(numeroA) / float(numeroB)
 
-    print(f"O resultado da divisão é: {res_div} \n")
+    print(f"\nO resultado da divisão é: {res_div} \n")
 
 
 
 # Primeira parte da calculadora concluído
 # Adicionar funções extras:
 def fisica():
+    print("\n---Cálculo da distância percorrida por um projétil---\n")
     # Variáveis:
     gravidade = 9.8 #Constante
     velocidade = verificar("Digite a velocidade inicial: \n") #Fornecido pelo usuário
     angulo = verificar("Digite o ângulo em graus:\n") #Fornecido pelo usuário
     radianos = math.radians(angulo) #Uso da biblioteca por questões de bloqueio trigonométrico
+    
 
     #Fazendo V ao quadrado:
     numeroA = velocidade * velocidade
@@ -61,7 +62,7 @@ def fisica():
 
     resultado = (numeroA * numeroB) / gravidade
 
-    print(f"A distancia percorrida pelo projétio foi de: {resultado} ")
+    print(f"\nA distancia percorrida pelo projétio foi de: {resultado}m \n")
 
 
 
@@ -89,7 +90,7 @@ def calcular_det(matriz):
 
 
 def determinate():
-    print("\nCÁLCULO DE DETERMINANTE \n")
+    print("\nCálculo do determinante\n")
 
     #pedir a ordem da matri
     ordem = int(verificar("Digite a ordem da matriz quadrada (ex: 2, 3, 4): "))
@@ -110,7 +111,7 @@ def determinate():
 
     #resultado
     resultado = calcular_det(matriz)
-    print(f"\n> O determinante da matriz é: {resultado} \n")
+    print(f"\nO determinante da matriz é: {resultado} \n")
 
 
 
